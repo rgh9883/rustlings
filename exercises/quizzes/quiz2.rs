@@ -27,27 +27,7 @@ mod my_module {
     use super::Command;
 
     // TODO: Complete the function as described above.
-    pub fn transformer(input: Vec<(String, Command)>) -> Vec<String> {
-        let mut output: Vec<String> = vec![];
-        for tuple in input.iter() {
-            match tuple.1 {
-                Command::Uppercase => {
-                    output.push(tuple.0.to_uppercase());
-                }
-                Command::Trim => {
-                    output.push(tuple.0.trim().to_string());
-                }
-                Command::Append(usize) => {
-                    let mut string = tuple.0.clone();
-                    for _ in 0..usize {
-                        string.push_str("bar");
-                    }
-                    output.push(string);
-                }
-            }
-        }
-        output
-    }
+    // pub fn transformer(input: ???) -> ??? { ??? }
 }
 
 fn main() {
@@ -57,7 +37,7 @@ fn main() {
 #[cfg(test)]
 mod tests {
     // TODO: What do we need to import to have `transformer` in scope?
-    use super::my_module::transformer;
+    // use ???;
     use super::Command;
 
     #[test]
